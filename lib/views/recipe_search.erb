@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html lang = "en-US">
+<head>
+	
+  <meta charset = "UTF-8">
+	<title> Recipe Search Results</title>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../views/style.css" >
+
+</head>
+<body>
+ 
+  <div id="test">
+    <p><center>this should be a box</center></p>
+  </div>
+
+  
+	<thead> Recipes from AllRecipes </thead>
+	  <% @ar_search.each do |title,link| %>
+     	<dl>
+        	<dt><a href="<%= link %>"><font color="blue" size= "3">
+        		<u> <%= title %> </u></font></a></dt>
+        	<dd></dd>
+      	</dl>
+    <% end %>  
+
+   	<thead> Recipes from Cooks </thead>
+	  <% @co_search.each do |title,link| %>
+      	<dl>
+        	<dt><a href="<%= link %>"><font color="blue" size= "3">
+        		<u> <%= title %> </u></font></a></dt>
+        	<dd></dd>
+      	</dl>
+    <% end %>  
+
+    <thead> Recipes from Epicurious </thead>
+	  <% @ep_search.each do |title,link| %>
+      	<dl>
+        	<dt><a href="<%= link %>"><font color="blue" size= "3">
+        		<u> <%= title %> </u></font></a></dt>
+        	<dd></dd>
+      	</dl>
+    <% end %>  
+
+</body>
